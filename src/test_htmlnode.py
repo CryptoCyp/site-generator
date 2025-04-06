@@ -1,4 +1,5 @@
-from htmlnode import HTMLNode
+from htmlnode import *
+
 
 def test_props_to_html_single():
     node = HTMLNode(tag="a", value="Link", props={"href": "https://example.com"})
@@ -19,6 +20,7 @@ def test_repr():
     node = HTMLNode(tag="p", value="Hello", props={"class": "text"})
     expected_repr = 'HTMLNode(tag=p, value=Hello, children=[], props={\'class\': \'text\'})'
     assert repr(node) == expected_repr
+
 
 if __name__ == "__main__":
     test_props_to_html_single()
